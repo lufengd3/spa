@@ -1,12 +1,13 @@
 <?php
+
 class Controller {
     public function model($model) {
-        require_once '../app/model/' . $model . '.php';
+        require_once APP_PATH . '/protected/models/' . $model . '.php';
 
         return new User;
     }
 
     public function view($view, $data = '') {
-        require_once '../app/view/home/' . $view . '.php';
+        require_once APP_PATH . '/protected/views/home/' . $view . '.php';
     }
 }

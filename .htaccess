@@ -1,7 +1,7 @@
 options -MultiViews
 rewriteengine On
 
-rewritebase /mvc/first/public
+rewritebase /mvc/spa/
 
 rewritecond %{REQUEST_FILENAME} !-d
 rewritecond %{REQUEST_FILENAME} !-f
