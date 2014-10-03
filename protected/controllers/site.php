@@ -1,22 +1,23 @@
 <?php
+
 class SiteController extends Controller {
+    public $layout = 'new';
+
     public function actionIndex($params) {
-        print_r($params);
-        /* $userModel = $this -> model('User'); */
-        /* $userName = $userModel -> getName(); */
-        /* $this -> view('index', array( */
-        /*     'name' => $userName */
-        /* )); */
+        $this -> view('index', array(
+            'name' => 'keith' 
+        ));
     }
 
-    public function actionCreate($username = '') {
-        User::create([
-            'username' => 'keith',
-        ]);
+    public function actionCreate() {
+        $this -> view('create');
     }
 
-    public function actionHello() {
-        echo "hello";
+    public function actionYes() {
+        if (isset($_POST)) {
+            print_r($_POST);
+        }
+        echo "yes action";
     }
 
 }

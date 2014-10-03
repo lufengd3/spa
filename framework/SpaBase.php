@@ -31,6 +31,7 @@ class SpaBase {
 
         require_once APP_PATH . '/protected/controllers/' . $this -> controller . '.php';
 
+        define('CONTROLLER', $this -> controller); 
         $controllerName = $this -> controller . 'Controller';
         $this -> controller = new $controllerName;
 
@@ -72,4 +73,5 @@ class SpaBase {
             return explode('/', filter_var($reqStr, FILTER_SANITIZE_URL));
         }
     }
+
 }
